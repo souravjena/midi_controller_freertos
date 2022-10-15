@@ -1,0 +1,35 @@
+\hypertarget{fft_8h_source}{}\doxysection{fft.\+h}
+\mbox{\hyperlink{fft_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#ifndef FFT\_H}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#define FFT\_H}}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{main_8h}{main.h}}"{}}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#include "{}arduinoFFT.h"{}}}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#define CHANNEL A0}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#define NUM\_SAMPLES 128}}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19 \textcolor{keyword}{extern} arduinoFFT \mbox{\hyperlink{fft_8h_a06dc8755eca604de4444291b9dfe17a0}{FFT}};                       }
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21 \textcolor{keyword}{extern} \textcolor{keyword}{const} uint16\_t samples;               \textcolor{comment}{// This value MUST ALWAYS be a power of 2}}
+\DoxyCodeLine{22 \textcolor{keyword}{extern} \textcolor{keyword}{const} \textcolor{keywordtype}{double} samplingFrequency;       \textcolor{comment}{// Hz, must be less than 10000 due to ADC}}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24 \textcolor{keyword}{extern} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} sampling\_period\_us;}
+\DoxyCodeLine{25 \textcolor{keyword}{extern} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} microseconds;}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27 \textcolor{keyword}{extern} \textcolor{keywordtype}{double} vReal[NUM\_SAMPLES];}
+\DoxyCodeLine{28 \textcolor{keyword}{extern} \textcolor{keywordtype}{double} vImag[NUM\_SAMPLES];}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{34 \textcolor{keywordtype}{void} \mbox{\hyperlink{fft_8h_a2b19030ec18cf95a48557866e490cd2e}{fft\_generate\_samples}}();}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{40 \textcolor{keywordtype}{void} \mbox{\hyperlink{fft_8h_a8efab6972b50e1a1335a89cb16dd903e}{fft\_init}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{46 \textcolor{keywordtype}{void} \mbox{\hyperlink{fft_8h_a680ab2de18efecb6d68a605ef0a77aec}{fft\_generate\_sample}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{56 \textcolor{keywordtype}{double} \mbox{\hyperlink{fft_8h_a609bb02785c0c4cd31b0f93313e6103b}{fft\_get}}(\textcolor{keywordtype}{double} *vReal, \textcolor{keywordtype}{double} *vImag, uint16\_t samples);}
+\DoxyCodeLine{57 }
+\DoxyCodeLine{58 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

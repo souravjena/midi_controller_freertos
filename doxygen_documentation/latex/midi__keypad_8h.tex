@@ -1,0 +1,98 @@
+\hypertarget{midi__keypad_8h}{}\doxysection{midi\+\_\+keypad.\+h File Reference}
+\label{midi__keypad_8h}\index{midi\_keypad.h@{midi\_keypad.h}}
+
+
+headerfile for the keypad file.  
+
+
+{\ttfamily \#include \char`\"{}midi.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$Keypad.\+h$>$}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{midi__keypad_8h_a3cfd3aa62338d12609f6d65bce97e9cd}\label{midi__keypad_8h_a3cfd3aa62338d12609f6d65bce97e9cd}} 
+\#define {\bfseries ROWS}~4
+\item 
+\mbox{\Hypertarget{midi__keypad_8h_ab59ad2ee1a48b83c2eef1f019ed8cc48}\label{midi__keypad_8h_ab59ad2ee1a48b83c2eef1f019ed8cc48}} 
+\#define {\bfseries COLS}~4
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structmidi__message}{midi\+\_\+message\+\_\+t}} \mbox{\hyperlink{midi__keypad_8h_a682bc75b7932c02572d5573edfd522fe}{midi\+\_\+get\+\_\+keypad\+\_\+reading}} (void)
+\begin{DoxyCompactList}\small\item\em Reads entered key and returns corresponding note. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structmidi__message}{midi\+\_\+message\+\_\+t}} \mbox{\hyperlink{midi__keypad_8h_aef796ac2d7d0cbd01b005b19f55abf50}{midi\+\_\+keypad\+\_\+message}} (char target\+\_\+key, char state)
+\begin{DoxyCompactList}\small\item\em Returns MIDI message for the target key and state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{midi__keypad_8h_a525e4118b9c8143c0062ace5a7c161a6}{task\+\_\+midi\+\_\+keypad}} (void $\ast$p)
+\begin{DoxyCompactList}\small\item\em Free\+RTOS Task to read the Keypad and push the corresponding note as MIDI message in a Queue. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{midi__keypad_8h_aa40f3e163c03b2c5473b8f0e04bb24ea}\label{midi__keypad_8h_aa40f3e163c03b2c5473b8f0e04bb24ea}} 
+Keypad {\bfseries midi\+\_\+keypad}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+headerfile for the keypad file. 
+
+\begin{DoxyAuthor}{Author}
+Sourav Jena, Yi Chen 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2022-\/05-\/28 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{midi__keypad_8h_a682bc75b7932c02572d5573edfd522fe}\label{midi__keypad_8h_a682bc75b7932c02572d5573edfd522fe}} 
+\index{midi\_keypad.h@{midi\_keypad.h}!midi\_get\_keypad\_reading@{midi\_get\_keypad\_reading}}
+\index{midi\_get\_keypad\_reading@{midi\_get\_keypad\_reading}!midi\_keypad.h@{midi\_keypad.h}}
+\doxysubsubsection{\texorpdfstring{midi\_get\_keypad\_reading()}{midi\_get\_keypad\_reading()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structmidi__message}{midi\+\_\+message\+\_\+t}} midi\+\_\+get\+\_\+keypad\+\_\+reading (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Reads entered key and returns corresponding note. 
+
+\begin{DoxyReturn}{Returns}
+midi\+\_\+message\+\_\+t Note corresponding to the key in MIDI format. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{midi__keypad_8h_aef796ac2d7d0cbd01b005b19f55abf50}\label{midi__keypad_8h_aef796ac2d7d0cbd01b005b19f55abf50}} 
+\index{midi\_keypad.h@{midi\_keypad.h}!midi\_keypad\_message@{midi\_keypad\_message}}
+\index{midi\_keypad\_message@{midi\_keypad\_message}!midi\_keypad.h@{midi\_keypad.h}}
+\doxysubsubsection{\texorpdfstring{midi\_keypad\_message()}{midi\_keypad\_message()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structmidi__message}{midi\+\_\+message\+\_\+t}} midi\+\_\+keypad\+\_\+message (\begin{DoxyParamCaption}\item[{char}]{target\+\_\+key,  }\item[{char}]{state }\end{DoxyParamCaption})}
+
+
+
+Returns MIDI message for the target key and state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target\+\_\+key} & Which key on the keypad is pressed. \\
+\hline
+{\em state} & Note to be ON or OFF. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+midi\+\_\+message\+\_\+t Returns MIDI message which is consumed by the DAW. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{midi__keypad_8h_a525e4118b9c8143c0062ace5a7c161a6}\label{midi__keypad_8h_a525e4118b9c8143c0062ace5a7c161a6}} 
+\index{midi\_keypad.h@{midi\_keypad.h}!task\_midi\_keypad@{task\_midi\_keypad}}
+\index{task\_midi\_keypad@{task\_midi\_keypad}!midi\_keypad.h@{midi\_keypad.h}}
+\doxysubsubsection{\texorpdfstring{task\_midi\_keypad()}{task\_midi\_keypad()}}
+{\footnotesize\ttfamily void task\+\_\+midi\+\_\+keypad (\begin{DoxyParamCaption}\item[{void $\ast$}]{p }\end{DoxyParamCaption})}
+
+
+
+Free\+RTOS Task to read the Keypad and push the corresponding note as MIDI message in a Queue. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & Parameters to be passed to the Task if any. \\
+\hline
+\end{DoxyParams}

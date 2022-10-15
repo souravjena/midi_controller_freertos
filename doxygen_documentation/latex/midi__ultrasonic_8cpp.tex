@@ -1,0 +1,102 @@
+\hypertarget{midi__ultrasonic_8cpp}{}\doxysection{midi\+\_\+ultrasonic.\+cpp File Reference}
+\label{midi__ultrasonic_8cpp}\index{midi\_ultrasonic.cpp@{midi\_ultrasonic.cpp}}
+
+
+Source code for Ultrasonic.  
+
+
+{\ttfamily \#include \char`\"{}midi\+\_\+ultrasonic.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{midi__ultrasonic_8cpp_a65ddee912cf7366371456ff947a35ba4}\label{midi__ultrasonic_8cpp_a65ddee912cf7366371456ff947a35ba4}} 
+void {\bfseries midi\+\_\+ultrasonic\+\_\+init} (void)
+\begin{DoxyCompactList}\small\item\em Initializes the Ultrasonic Sensor. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{midi__ultrasonic_8cpp_a6bf23be0753f09dd5b12290547f3eb30}{midi\+\_\+ultrasonic\+\_\+get\+\_\+dis}} (void)
+\begin{DoxyCompactList}\small\item\em Gets distance from the ultrasonic sensor. \end{DoxyCompactList}\item 
+int16\+\_\+t \mbox{\hyperlink{midi__ultrasonic_8cpp_a01eb621f12faaf659968e085dcccfae8}{midi\+\_\+ultrasonic\+\_\+get\+\_\+note}} (void)
+\begin{DoxyCompactList}\small\item\em Maps distance to note. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structmidi__message}{midi\+\_\+message\+\_\+t}} \mbox{\hyperlink{midi__ultrasonic_8cpp_a006b9fad468f4fa7f47927acb5a32da0}{midi\+\_\+ultrasonic\+\_\+key}} (void)
+\begin{DoxyCompactList}\small\item\em Generates midi message for current distance. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{midi__ultrasonic_8cpp_aa3a6bb380cbbdd06ab1fb37416c051e7}{task\+\_\+midi\+\_\+ultrasonic}} (void $\ast$p)
+\begin{DoxyCompactList}\small\item\em Free\+RTOS task to read ultrasonic sensor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{midi__ultrasonic_8cpp_ad1e7a4f7975be032b7476b2189856fb8}\label{midi__ultrasonic_8cpp_ad1e7a4f7975be032b7476b2189856fb8}} 
+uint16\+\_\+t {\bfseries total\+\_\+time\+\_\+taken}
+\item 
+\mbox{\Hypertarget{midi__ultrasonic_8cpp_a7ae9d3ad463ec7a0eb38ee23a15c51e7}\label{midi__ultrasonic_8cpp_a7ae9d3ad463ec7a0eb38ee23a15c51e7}} 
+uint16\+\_\+t {\bfseries distance}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Source code for Ultrasonic. 
+
+\begin{DoxyAuthor}{Author}
+Sourav Jena, Yi Chen 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2022-\/05-\/28 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{midi__ultrasonic_8cpp_a6bf23be0753f09dd5b12290547f3eb30}\label{midi__ultrasonic_8cpp_a6bf23be0753f09dd5b12290547f3eb30}} 
+\index{midi\_ultrasonic.cpp@{midi\_ultrasonic.cpp}!midi\_ultrasonic\_get\_dis@{midi\_ultrasonic\_get\_dis}}
+\index{midi\_ultrasonic\_get\_dis@{midi\_ultrasonic\_get\_dis}!midi\_ultrasonic.cpp@{midi\_ultrasonic.cpp}}
+\doxysubsubsection{\texorpdfstring{midi\_ultrasonic\_get\_dis()}{midi\_ultrasonic\_get\_dis()}}
+{\footnotesize\ttfamily uint16\+\_\+t midi\+\_\+ultrasonic\+\_\+get\+\_\+dis (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Gets distance from the ultrasonic sensor. 
+
+\begin{DoxyReturn}{Returns}
+uint16\+\_\+t Distance in cm. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{midi__ultrasonic_8cpp_a01eb621f12faaf659968e085dcccfae8}\label{midi__ultrasonic_8cpp_a01eb621f12faaf659968e085dcccfae8}} 
+\index{midi\_ultrasonic.cpp@{midi\_ultrasonic.cpp}!midi\_ultrasonic\_get\_note@{midi\_ultrasonic\_get\_note}}
+\index{midi\_ultrasonic\_get\_note@{midi\_ultrasonic\_get\_note}!midi\_ultrasonic.cpp@{midi\_ultrasonic.cpp}}
+\doxysubsubsection{\texorpdfstring{midi\_ultrasonic\_get\_note()}{midi\_ultrasonic\_get\_note()}}
+{\footnotesize\ttfamily int16\+\_\+t midi\+\_\+ultrasonic\+\_\+get\+\_\+note (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Maps distance to note. 
+
+\begin{DoxyReturn}{Returns}
+int16\+\_\+t Note number. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{midi__ultrasonic_8cpp_a006b9fad468f4fa7f47927acb5a32da0}\label{midi__ultrasonic_8cpp_a006b9fad468f4fa7f47927acb5a32da0}} 
+\index{midi\_ultrasonic.cpp@{midi\_ultrasonic.cpp}!midi\_ultrasonic\_key@{midi\_ultrasonic\_key}}
+\index{midi\_ultrasonic\_key@{midi\_ultrasonic\_key}!midi\_ultrasonic.cpp@{midi\_ultrasonic.cpp}}
+\doxysubsubsection{\texorpdfstring{midi\_ultrasonic\_key()}{midi\_ultrasonic\_key()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structmidi__message}{midi\+\_\+message\+\_\+t}} midi\+\_\+ultrasonic\+\_\+key (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Generates midi message for current distance. 
+
+\begin{DoxyReturn}{Returns}
+midi\+\_\+message\+\_\+t MIDI message with note information. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{midi__ultrasonic_8cpp_aa3a6bb380cbbdd06ab1fb37416c051e7}\label{midi__ultrasonic_8cpp_aa3a6bb380cbbdd06ab1fb37416c051e7}} 
+\index{midi\_ultrasonic.cpp@{midi\_ultrasonic.cpp}!task\_midi\_ultrasonic@{task\_midi\_ultrasonic}}
+\index{task\_midi\_ultrasonic@{task\_midi\_ultrasonic}!midi\_ultrasonic.cpp@{midi\_ultrasonic.cpp}}
+\doxysubsubsection{\texorpdfstring{task\_midi\_ultrasonic()}{task\_midi\_ultrasonic()}}
+{\footnotesize\ttfamily void task\+\_\+midi\+\_\+ultrasonic (\begin{DoxyParamCaption}\item[{void $\ast$}]{p }\end{DoxyParamCaption})}
+
+
+
+Free\+RTOS task to read ultrasonic sensor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & Pointer to parameters to be passed to the Free\+RTOS task if any. \\
+\hline
+\end{DoxyParams}

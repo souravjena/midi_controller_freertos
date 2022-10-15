@@ -1,0 +1,70 @@
+\hypertarget{midi__lcd_8cpp}{}\doxysection{midi\+\_\+lcd.\+cpp File Reference}
+\label{midi__lcd_8cpp}\index{midi\_lcd.cpp@{midi\_lcd.cpp}}
+
+
+LCD source code.  
+
+
+{\ttfamily \#include \char`\"{}midi\+\_\+lcd.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}midi\+\_\+keypad.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{midi__lcd_8cpp_a30edda61f55aa7ab99a162f46083bce5}\label{midi__lcd_8cpp_a30edda61f55aa7ab99a162f46083bce5}} 
+Liquid\+Crystal {\bfseries lcd} (17, 16, 21, 20, 19, 18)
+\item 
+\mbox{\Hypertarget{midi__lcd_8cpp_a709857440789090eb198266a3e412469}\label{midi__lcd_8cpp_a709857440789090eb198266a3e412469}} 
+void {\bfseries midi\+\_\+lcd\+\_\+init} ()
+\begin{DoxyCompactList}\small\item\em Initialized the LCD. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{midi__lcd_8cpp_a9c4ffa58f40473f70f69677d26f26fe0}\label{midi__lcd_8cpp_a9c4ffa58f40473f70f69677d26f26fe0}} 
+void {\bfseries midi\+\_\+lcd\+\_\+welcome} ()
+\begin{DoxyCompactList}\small\item\em Prints welcome message on the LCD. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{midi__lcd_8cpp_af1d0d0edb1ab53e0f4f6af3c4da9ea25}\label{midi__lcd_8cpp_af1d0d0edb1ab53e0f4f6af3c4da9ea25}} 
+int {\bfseries check\+\_\+password} (char $\ast$entered\+\_\+pass)
+\item 
+\mbox{\Hypertarget{midi__lcd_8cpp_af4ea4a97f1eac1fe44a0b450a9cbe917}\label{midi__lcd_8cpp_af4ea4a97f1eac1fe44a0b450a9cbe917}} 
+void {\bfseries midi\+\_\+lcd\+\_\+get\+\_\+password} (void)
+\begin{DoxyCompactList}\small\item\em Waits for user to enter the correct password. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{midi__lcd_8cpp_adddad8309215e0db7c5bf93285f05059}{task\+\_\+midi\+\_\+lcd}} (void $\ast$p)
+\begin{DoxyCompactList}\small\item\em Free\+RTOS task to print welcome message on the LCD. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{midi__lcd_8cpp_a2f81a4dff39e093509f6371b3782f94f}\label{midi__lcd_8cpp_a2f81a4dff39e093509f6371b3782f94f}} 
+char {\bfseries password} \mbox{[}3\mbox{]} = \{\textquotesingle{}1\textquotesingle{}, \textquotesingle{}2\textquotesingle{}, \textquotesingle{}3\textquotesingle{}\}
+\item 
+\mbox{\Hypertarget{midi__lcd_8cpp_a52f153313a1678431be771edbe5721ed}\label{midi__lcd_8cpp_a52f153313a1678431be771edbe5721ed}} 
+char {\bfseries entered\+\_\+pass} \mbox{[}3\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+LCD source code. 
+
+\begin{DoxyAuthor}{Author}
+Sourav Jena, Yi Chen 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2022-\/05-\/28 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{midi__lcd_8cpp_adddad8309215e0db7c5bf93285f05059}\label{midi__lcd_8cpp_adddad8309215e0db7c5bf93285f05059}} 
+\index{midi\_lcd.cpp@{midi\_lcd.cpp}!task\_midi\_lcd@{task\_midi\_lcd}}
+\index{task\_midi\_lcd@{task\_midi\_lcd}!midi\_lcd.cpp@{midi\_lcd.cpp}}
+\doxysubsubsection{\texorpdfstring{task\_midi\_lcd()}{task\_midi\_lcd()}}
+{\footnotesize\ttfamily void task\+\_\+midi\+\_\+lcd (\begin{DoxyParamCaption}\item[{void $\ast$}]{p }\end{DoxyParamCaption})}
+
+
+
+Free\+RTOS task to print welcome message on the LCD. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & Input parameter for the Free\+RTOS task, if any. \\
+\hline
+\end{DoxyParams}

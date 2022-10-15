@@ -1,0 +1,60 @@
+\hypertarget{midi__pot_8cpp}{}\doxysection{midi\+\_\+pot.\+cpp File Reference}
+\label{midi__pot_8cpp}\index{midi\_pot.cpp@{midi\_pot.cpp}}
+
+
+Source file for the Potentiometer.  
+
+
+{\ttfamily \#include \char`\"{}midi\+\_\+pot.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structmidi__message}{midi\+\_\+message\+\_\+t}} \mbox{\hyperlink{midi__pot_8cpp_a0e977527efd80560673715e012626289}{midi\+\_\+get\+\_\+pot\+\_\+reading}} (void)
+\begin{DoxyCompactList}\small\item\em Returns stabilized pot reading. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{midi__pot_8cpp_aaa8e167c54af6a9a0522ea4e174fa1c9}{task\+\_\+midi\+\_\+pot}} (void $\ast$p)
+\begin{DoxyCompactList}\small\item\em Free\+RTOS task to read the pot. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Source file for the Potentiometer. 
+
+\begin{DoxyAuthor}{Author}
+Sourav Jena, Yi Chen 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2022-\/05-\/28 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{midi__pot_8cpp_a0e977527efd80560673715e012626289}\label{midi__pot_8cpp_a0e977527efd80560673715e012626289}} 
+\index{midi\_pot.cpp@{midi\_pot.cpp}!midi\_get\_pot\_reading@{midi\_get\_pot\_reading}}
+\index{midi\_get\_pot\_reading@{midi\_get\_pot\_reading}!midi\_pot.cpp@{midi\_pot.cpp}}
+\doxysubsubsection{\texorpdfstring{midi\_get\_pot\_reading()}{midi\_get\_pot\_reading()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structmidi__message}{midi\+\_\+message\+\_\+t}} midi\+\_\+get\+\_\+pot\+\_\+reading (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Returns stabilized pot reading. 
+
+\begin{DoxyReturn}{Returns}
+midi\+\_\+message\+\_\+t Returns pot reading in MIDI message format. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{midi__pot_8cpp_aaa8e167c54af6a9a0522ea4e174fa1c9}\label{midi__pot_8cpp_aaa8e167c54af6a9a0522ea4e174fa1c9}} 
+\index{midi\_pot.cpp@{midi\_pot.cpp}!task\_midi\_pot@{task\_midi\_pot}}
+\index{task\_midi\_pot@{task\_midi\_pot}!midi\_pot.cpp@{midi\_pot.cpp}}
+\doxysubsubsection{\texorpdfstring{task\_midi\_pot()}{task\_midi\_pot()}}
+{\footnotesize\ttfamily void task\+\_\+midi\+\_\+pot (\begin{DoxyParamCaption}\item[{void $\ast$}]{p }\end{DoxyParamCaption})}
+
+
+
+Free\+RTOS task to read the pot. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & Pointer to the parameters to be passed to the task if any. \\
+\hline
+\end{DoxyParams}

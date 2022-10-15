@@ -1,0 +1,25 @@
+\hypertarget{midi__keypad_8h_source}{}\doxysection{midi\+\_\+keypad.\+h}
+\mbox{\hyperlink{midi__keypad_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#ifndef MIDI\_KEYPAD\_H}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#define MIDI\_KEYPAD\_H}}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{midi_8h}{midi.h}}"{}}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#include <Keypad.h>}}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#define ROWS    4}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#define COLS    4}}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19 \textcolor{keyword}{extern} Keypad midi\_keypad;}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{26 \mbox{\hyperlink{structmidi__message}{midi\_message\_t}} \mbox{\hyperlink{midi__keypad_8h_a682bc75b7932c02572d5573edfd522fe}{midi\_get\_keypad\_reading}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{35 \mbox{\hyperlink{structmidi__message}{midi\_message\_t}} \mbox{\hyperlink{midi__keypad_8h_aef796ac2d7d0cbd01b005b19f55abf50}{midi\_keypad\_message}}(\textcolor{keywordtype}{char} target\_key, \textcolor{keywordtype}{char} state);}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37 }
+\DoxyCodeLine{43 \textcolor{keywordtype}{void} \mbox{\hyperlink{midi__keypad_8h_a525e4118b9c8143c0062ace5a7c161a6}{task\_midi\_keypad}}(\textcolor{keywordtype}{void} *p);}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

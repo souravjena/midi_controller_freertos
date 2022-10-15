@@ -1,0 +1,55 @@
+\hypertarget{midi__lcd_8h}{}\doxysection{midi\+\_\+lcd.\+h File Reference}
+\label{midi__lcd_8h}\index{midi\_lcd.h@{midi\_lcd.h}}
+
+
+Header file for the LCD.  
+
+
+{\ttfamily \#include \char`\"{}midi.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Liquid\+Crystal.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{midi__lcd_8h_a709857440789090eb198266a3e412469}\label{midi__lcd_8h_a709857440789090eb198266a3e412469}} 
+void {\bfseries midi\+\_\+lcd\+\_\+init} ()
+\begin{DoxyCompactList}\small\item\em Initialized the LCD. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{midi__lcd_8h_af4ea4a97f1eac1fe44a0b450a9cbe917}\label{midi__lcd_8h_af4ea4a97f1eac1fe44a0b450a9cbe917}} 
+void {\bfseries midi\+\_\+lcd\+\_\+get\+\_\+password} (void)
+\begin{DoxyCompactList}\small\item\em Waits for user to enter the correct password. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{midi__lcd_8h_a9c4ffa58f40473f70f69677d26f26fe0}\label{midi__lcd_8h_a9c4ffa58f40473f70f69677d26f26fe0}} 
+void {\bfseries midi\+\_\+lcd\+\_\+welcome} ()
+\begin{DoxyCompactList}\small\item\em Prints welcome message on the LCD. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{midi__lcd_8h_adddad8309215e0db7c5bf93285f05059}{task\+\_\+midi\+\_\+lcd}} (void $\ast$p)
+\begin{DoxyCompactList}\small\item\em Free\+RTOS task to print welcome message on the LCD. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Header file for the LCD. 
+
+\begin{DoxyAuthor}{Author}
+Sourav Jena, Yi Chen 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2022-\/05-\/28 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{midi__lcd_8h_adddad8309215e0db7c5bf93285f05059}\label{midi__lcd_8h_adddad8309215e0db7c5bf93285f05059}} 
+\index{midi\_lcd.h@{midi\_lcd.h}!task\_midi\_lcd@{task\_midi\_lcd}}
+\index{task\_midi\_lcd@{task\_midi\_lcd}!midi\_lcd.h@{midi\_lcd.h}}
+\doxysubsubsection{\texorpdfstring{task\_midi\_lcd()}{task\_midi\_lcd()}}
+{\footnotesize\ttfamily void task\+\_\+midi\+\_\+lcd (\begin{DoxyParamCaption}\item[{void $\ast$}]{p }\end{DoxyParamCaption})}
+
+
+
+Free\+RTOS task to print welcome message on the LCD. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & Input parameter for the Free\+RTOS task, if any. \\
+\hline
+\end{DoxyParams}

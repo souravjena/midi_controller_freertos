@@ -1,0 +1,69 @@
+\hypertarget{midi__pot_8h}{}\doxysection{midi\+\_\+pot.\+h File Reference}
+\label{midi__pot_8h}\index{midi\_pot.h@{midi\_pot.h}}
+
+
+Header file for the potentiometer.  
+
+
+{\ttfamily \#include \char`\"{}midi.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{midi__pot_8h_a4679d8ea8690999a6c6c7c0cb245c879}\label{midi__pot_8h_a4679d8ea8690999a6c6c7c0cb245c879}} 
+\#define {\bfseries THRESHOLD}~30
+\item 
+\mbox{\Hypertarget{midi__pot_8h_aa3b4b9b20938fec2b5f153acae578d96}\label{midi__pot_8h_aa3b4b9b20938fec2b5f153acae578d96}} 
+\#define {\bfseries PIN\+\_\+\+POT}~A4
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structmidi__message}{midi\+\_\+message\+\_\+t}} \mbox{\hyperlink{midi__pot_8h_a0e977527efd80560673715e012626289}{midi\+\_\+get\+\_\+pot\+\_\+reading}} (void)
+\begin{DoxyCompactList}\small\item\em Returns stabilized pot reading. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{midi__pot_8h_aaa8e167c54af6a9a0522ea4e174fa1c9}{task\+\_\+midi\+\_\+pot}} (void $\ast$p)
+\begin{DoxyCompactList}\small\item\em Free\+RTOS task to read the pot. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Header file for the potentiometer. 
+
+\begin{DoxyAuthor}{Author}
+Sourav Jena, Yi Chen 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2022-\/05-\/28 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{midi__pot_8h_a0e977527efd80560673715e012626289}\label{midi__pot_8h_a0e977527efd80560673715e012626289}} 
+\index{midi\_pot.h@{midi\_pot.h}!midi\_get\_pot\_reading@{midi\_get\_pot\_reading}}
+\index{midi\_get\_pot\_reading@{midi\_get\_pot\_reading}!midi\_pot.h@{midi\_pot.h}}
+\doxysubsubsection{\texorpdfstring{midi\_get\_pot\_reading()}{midi\_get\_pot\_reading()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structmidi__message}{midi\+\_\+message\+\_\+t}} midi\+\_\+get\+\_\+pot\+\_\+reading (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Returns stabilized pot reading. 
+
+\begin{DoxyReturn}{Returns}
+midi\+\_\+message\+\_\+t Returns pot reading in MIDI message format. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{midi__pot_8h_aaa8e167c54af6a9a0522ea4e174fa1c9}\label{midi__pot_8h_aaa8e167c54af6a9a0522ea4e174fa1c9}} 
+\index{midi\_pot.h@{midi\_pot.h}!task\_midi\_pot@{task\_midi\_pot}}
+\index{task\_midi\_pot@{task\_midi\_pot}!midi\_pot.h@{midi\_pot.h}}
+\doxysubsubsection{\texorpdfstring{task\_midi\_pot()}{task\_midi\_pot()}}
+{\footnotesize\ttfamily void task\+\_\+midi\+\_\+pot (\begin{DoxyParamCaption}\item[{void $\ast$}]{p }\end{DoxyParamCaption})}
+
+
+
+Free\+RTOS task to read the pot. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & Pointer to the parameters to be passed to the task if any. \\
+\hline
+\end{DoxyParams}

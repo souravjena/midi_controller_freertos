@@ -1,0 +1,95 @@
+\hypertarget{fft_8h}{}\doxysection{fft.\+h File Reference}
+\label{fft_8h}\index{fft.h@{fft.h}}
+
+
+Header file for FFT.  
+
+
+{\ttfamily \#include \char`\"{}main.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}arduino\+FFT.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{fft_8h_ace6a11e892466500d47d1f45f042bc53}\label{fft_8h_ace6a11e892466500d47d1f45f042bc53}} 
+\#define {\bfseries CHANNEL}~A0
+\item 
+\mbox{\Hypertarget{fft_8h_af0b23eedf2352de4c1eff77e1401730c}\label{fft_8h_af0b23eedf2352de4c1eff77e1401730c}} 
+\#define {\bfseries NUM\+\_\+\+SAMPLES}~128
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{fft_8h_a2b19030ec18cf95a48557866e490cd2e}\label{fft_8h_a2b19030ec18cf95a48557866e490cd2e}} 
+void {\bfseries fft\+\_\+generate\+\_\+samples} ()
+\begin{DoxyCompactList}\small\item\em Generates random 128 samples and uses these to populate a buffer. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{fft_8h_a8efab6972b50e1a1335a89cb16dd903e}\label{fft_8h_a8efab6972b50e1a1335a89cb16dd903e}} 
+void {\bfseries fft\+\_\+init} (void)
+\begin{DoxyCompactList}\small\item\em FFT initializations. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{fft_8h_a680ab2de18efecb6d68a605ef0a77aec}\label{fft_8h_a680ab2de18efecb6d68a605ef0a77aec}} 
+void {\bfseries fft\+\_\+generate\+\_\+sample} (void)
+\begin{DoxyCompactList}\small\item\em Uses ADC to generate samples. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{fft_8h_a609bb02785c0c4cd31b0f93313e6103b}{fft\+\_\+get}} (double $\ast$v\+Real, double $\ast$v\+Imag, uint16\+\_\+t samples)
+\begin{DoxyCompactList}\small\item\em Returns computed FFT. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{fft_8h_a06dc8755eca604de4444291b9dfe17a0}\label{fft_8h_a06dc8755eca604de4444291b9dfe17a0}} 
+arduino\+FFT {\bfseries FFT}
+\begin{DoxyCompactList}\small\item\em FFT Object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{fft_8h_aca9d2c4e4a84df291bd920d12d701bd9}\label{fft_8h_aca9d2c4e4a84df291bd920d12d701bd9}} 
+const uint16\+\_\+t {\bfseries samples}
+\item 
+\mbox{\Hypertarget{fft_8h_a61d46b8b1f7e981e372cdf50c4269b87}\label{fft_8h_a61d46b8b1f7e981e372cdf50c4269b87}} 
+const double {\bfseries sampling\+Frequency}
+\item 
+\mbox{\Hypertarget{fft_8h_a4d34ff2bac38573bf41c5c084467216e}\label{fft_8h_a4d34ff2bac38573bf41c5c084467216e}} 
+unsigned int {\bfseries sampling\+\_\+period\+\_\+us}
+\item 
+\mbox{\Hypertarget{fft_8h_a343a11c8b0bcfdaf488082ce172eb119}\label{fft_8h_a343a11c8b0bcfdaf488082ce172eb119}} 
+unsigned long {\bfseries microseconds}
+\item 
+\mbox{\Hypertarget{fft_8h_a63acc2c3144ccd3affed58691791f72a}\label{fft_8h_a63acc2c3144ccd3affed58691791f72a}} 
+double {\bfseries v\+Real} \mbox{[}NUM\+\_\+\+SAMPLES\mbox{]}
+\item 
+\mbox{\Hypertarget{fft_8h_ad50a078194de9057331ef7fc121a5487}\label{fft_8h_ad50a078194de9057331ef7fc121a5487}} 
+double {\bfseries v\+Imag} \mbox{[}NUM\+\_\+\+SAMPLES\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Header file for FFT. 
+
+\begin{DoxyAuthor}{Author}
+Sourav Jena, Yi Chen 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2022-\/05-\/28 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{fft_8h_a609bb02785c0c4cd31b0f93313e6103b}\label{fft_8h_a609bb02785c0c4cd31b0f93313e6103b}} 
+\index{fft.h@{fft.h}!fft\_get@{fft\_get}}
+\index{fft\_get@{fft\_get}!fft.h@{fft.h}}
+\doxysubsubsection{\texorpdfstring{fft\_get()}{fft\_get()}}
+{\footnotesize\ttfamily double fft\+\_\+get (\begin{DoxyParamCaption}\item[{double $\ast$}]{v\+Real,  }\item[{double $\ast$}]{v\+Imag,  }\item[{uint16\+\_\+t}]{samples }\end{DoxyParamCaption})}
+
+
+
+Returns computed FFT. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v\+Real} & Address of the buffer containing real values of the smaples. \\
+\hline
+{\em v\+Imag} & Address of the buffer containing imaginary values of the samples \\
+\hline
+{\em samples} & Number of samples \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double Computed FFT 
+\end{DoxyReturn}

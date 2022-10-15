@@ -1,0 +1,47 @@
+\hypertarget{main_8h_source}{}\doxysection{main.\+h}
+\mbox{\hyperlink{main_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#ifndef MAIN\_H}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#define MAIN\_H}}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include <Arduino\_FreeRTOS.h>}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#include <stdint.h>}}
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#include <queue.h>}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#include <task.h>}}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{fft_8h}{fft.h}}"{}}}
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{rt1_8h}{rt1.h}}"{}}}
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{rt2_8h}{rt2.h}}"{}}}
+\DoxyCodeLine{21 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{rt3_8h}{rt3.h}}"{}}}
+\DoxyCodeLine{22 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{rt4_8h}{rt4.h}}"{}}}
+\DoxyCodeLine{23 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{midi_8h}{midi.h}}"{}}}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25 \textcolor{keyword}{extern} TaskHandle\_t task\_rt1\_handle;}
+\DoxyCodeLine{26 \textcolor{keyword}{extern} TaskHandle\_t task\_rt2\_handle;}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28 \textcolor{keyword}{extern} TaskHandle\_t task\_rt3\_handle;}
+\DoxyCodeLine{29 \textcolor{keyword}{extern} TaskHandle\_t task\_rt3p0\_handle;}
+\DoxyCodeLine{30 \textcolor{keyword}{extern} TaskHandle\_t task\_rt3p1\_handle;}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{32 \textcolor{keyword}{extern} TaskHandle\_t task\_rt4\_handle;}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{34 \textcolor{keyword}{extern} QueueHandle\_t q\_handle\_buffer;}
+\DoxyCodeLine{35 \textcolor{keyword}{extern} QueueHandle\_t q\_handle\_signal;}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37 \textcolor{keyword}{struct }\mbox{\hyperlink{structfft__buffer}{fft\_buffer}} \{}
+\DoxyCodeLine{38   \textcolor{keywordtype}{double} *arr\_real;}
+\DoxyCodeLine{39   \textcolor{keywordtype}{double} *arr\_img;}
+\DoxyCodeLine{40 \};}
+\DoxyCodeLine{41 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{structfft__buffer}{fft\_buffer}} \mbox{\hyperlink{structfft__buffer}{fft\_buffer\_t}};}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43 }
+\DoxyCodeLine{44 \textcolor{keyword}{struct }\mbox{\hyperlink{structmy__time}{my\_time}} \{}
+\DoxyCodeLine{45   TickType\_t rtos\_ticks;}
+\DoxyCodeLine{46   uint32\_t time\_ms;}
+\DoxyCodeLine{47 \};}
+\DoxyCodeLine{48 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{structmy__time}{my\_time}} \mbox{\hyperlink{structmy__time}{time\_t}};}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{50 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

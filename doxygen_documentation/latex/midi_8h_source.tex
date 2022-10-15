@@ -1,0 +1,55 @@
+\hypertarget{midi_8h_source}{}\doxysection{midi.\+h}
+\mbox{\hyperlink{midi_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#ifndef MIDI\_H}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#define MIDI\_H}}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include "{}Arduino.h"{}}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#include <stdint.h>}}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#include <Arduino\_FreeRTOS.h>}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#include <queue.h>}}
+\DoxyCodeLine{18 \textcolor{preprocessor}{\#include <task.h>}}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21 \textcolor{preprocessor}{\#define NOTE\_MID\_C  60}}
+\DoxyCodeLine{22 \textcolor{preprocessor}{\#define NOTE\_MID\_G 81}}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24 \textcolor{preprocessor}{\#define MIDI\_STATUS\_CONTROL     0b10110001}}
+\DoxyCodeLine{25 \textcolor{preprocessor}{\#define MIDI\_STATUS\_NOTE\_ON     0b10010000}}
+\DoxyCodeLine{26 \textcolor{preprocessor}{\#define MIDI\_STATUS\_NOTE\_OFF    0b10000000}}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28 }
+\DoxyCodeLine{29 \textcolor{keyword}{extern} TaskHandle\_t task\_midi\_keypad\_handle;}
+\DoxyCodeLine{30 \textcolor{keyword}{extern} TaskHandle\_t task\_midi\_ultrasonic\_handle;}
+\DoxyCodeLine{31 \textcolor{keyword}{extern} TaskHandle\_t task\_midi\_pot\_handle;}
+\DoxyCodeLine{32 \textcolor{keyword}{extern} TaskHandle\_t task\_midi\_lcd\_handle;}
+\DoxyCodeLine{33 \textcolor{keyword}{extern} TaskHandle\_t task\_midi\_transmitter\_handle;}
+\DoxyCodeLine{34 \textcolor{keyword}{extern} TaskHandle\_t task\_midi\_start\_handle;}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{36 \textcolor{keyword}{extern} QueueHandle\_t q\_midi\_cmd\_handle;}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38 \textcolor{keyword}{struct }\mbox{\hyperlink{structmidi__message}{midi\_message}} \{}
+\DoxyCodeLine{39     int8\_t status;}
+\DoxyCodeLine{40     uint8\_t data1;}
+\DoxyCodeLine{41     uint8\_t data2;}
+\DoxyCodeLine{42 \};}
+\DoxyCodeLine{43 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{structmidi__message}{midi\_message}} \mbox{\hyperlink{structmidi__message}{midi\_message\_t}};}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{midi__pot_8h}{midi\_pot.h}}"{}}}
+\DoxyCodeLine{46 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{midi__keypad_8h}{midi\_keypad.h}}"{}}}
+\DoxyCodeLine{47 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{midi__ultrasonic_8h}{midi\_ultrasonic.h}}"{}}}
+\DoxyCodeLine{48 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{midi__lcd_8h}{midi\_lcd.h}}"{}}}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{50 }
+\DoxyCodeLine{56 \textcolor{keywordtype}{void} \mbox{\hyperlink{midi_8h_a43ccf278f0743f50e5ead3692e925eb2}{midi\_send\_msg}}(\mbox{\hyperlink{structmidi__message}{midi\_message\_t}} transmit);}
+\DoxyCodeLine{57 }
+\DoxyCodeLine{63 \textcolor{keywordtype}{void} \mbox{\hyperlink{midi_8h_ad682b3321756755baf0c08bf7a428924}{task\_midi\_transmitter}}(\textcolor{keywordtype}{void} *p);}
+\DoxyCodeLine{64 }
+\DoxyCodeLine{65 }
+\DoxyCodeLine{70 \textcolor{keywordtype}{void} \mbox{\hyperlink{midi_8h_a1c9b075a0c8ddf2fa249776f76a23065}{midi\_init}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{71 }
+\DoxyCodeLine{72 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

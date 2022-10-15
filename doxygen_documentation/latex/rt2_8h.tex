@@ -1,0 +1,121 @@
+\hypertarget{rt2_8h}{}\doxysection{rt2.\+h File Reference}
+\label{rt2_8h}\index{rt2.h@{rt2.h}}
+
+
+headerfile for RT2.  
+
+
+{\ttfamily \#include \char`\"{}Arduino.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$Arduino\+\_\+\+Free\+RTOS.\+h$>$}\newline
+{\ttfamily \#include $<$avr/io.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}midi.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{rt2_8h_aa4e5c6f3e8f5c61e20cc3a60c72b7eb4}\label{rt2_8h_aa4e5c6f3e8f5c61e20cc3a60c72b7eb4}} 
+\#define {\bfseries DDR\+\_\+\+SPEAKER}~DDRH
+\item 
+\mbox{\Hypertarget{rt2_8h_a6d70f18143765fe064150d1a21884f88}\label{rt2_8h_a6d70f18143765fe064150d1a21884f88}} 
+\#define {\bfseries PORT\+\_\+\+SPEAKER}~PORTH
+\item 
+\mbox{\Hypertarget{rt2_8h_a40a8044a70c2ac07d2456f23bd4522a3}\label{rt2_8h_a40a8044a70c2ac07d2456f23bd4522a3}} 
+\#define {\bfseries PIN\+\_\+\+SPEAKER}~PH3
+\item 
+\mbox{\Hypertarget{rt2_8h_a17dceaa32bef077e01b9e51c2d3d1d82}\label{rt2_8h_a17dceaa32bef077e01b9e51c2d3d1d82}} 
+\#define {\bfseries TIMER4\+\_\+\+POWER\+\_\+\+REG}~PRR1
+\item 
+\mbox{\Hypertarget{rt2_8h_a3db165c7284863dc58c9e915117157bf}\label{rt2_8h_a3db165c7284863dc58c9e915117157bf}} 
+\#define {\bfseries TIMER4\+\_\+\+CONTROL\+\_\+\+REG\+\_\+A}~TCCR4A
+\item 
+\mbox{\Hypertarget{rt2_8h_af3812e44c3a5217ea45b75331453c6c3}\label{rt2_8h_af3812e44c3a5217ea45b75331453c6c3}} 
+\#define {\bfseries TIMER4\+\_\+\+CONTROL\+\_\+\+REG\+\_\+B}~TCCR4B
+\item 
+\mbox{\Hypertarget{rt2_8h_a76e000aa992503cce504e8ce2cdc760b}\label{rt2_8h_a76e000aa992503cce504e8ce2cdc760b}} 
+\#define {\bfseries TIMER4\+\_\+\+COUNT\+\_\+\+REG}~TCNT4
+\item 
+\mbox{\Hypertarget{rt2_8h_a02983181582d8d04db21cf831522a493}\label{rt2_8h_a02983181582d8d04db21cf831522a493}} 
+\#define {\bfseries TIMER4\+\_\+\+OUTPUT\+\_\+\+COMPARE\+\_\+\+REG}~OCR4A
+\item 
+\mbox{\Hypertarget{rt2_8h_a6416e086f3ad1d77c3ded462dd4f2bd2}\label{rt2_8h_a6416e086f3ad1d77c3ded462dd4f2bd2}} 
+\#define {\bfseries BIT\+\_\+\+SET}(PORT,  BIT)~(PORT $\vert$= (1 $<$$<$ BIT))
+\item 
+\mbox{\Hypertarget{rt2_8h_aef19281a1305705a857becf617cb162c}\label{rt2_8h_aef19281a1305705a857becf617cb162c}} 
+\#define {\bfseries BIT\+\_\+\+CLR}(PORT,  BIT)~(PORT \&= $\sim$(1 $<$$<$ BIT))
+\item 
+\mbox{\Hypertarget{rt2_8h_a7f2194cd5616dde22c03f163b7bdbe42}\label{rt2_8h_a7f2194cd5616dde22c03f163b7bdbe42}} 
+\#define {\bfseries HZ\+\_\+293}~107
+\item 
+\mbox{\Hypertarget{rt2_8h_afbdd153b05928d7ab85ff3ed3d0d8629}\label{rt2_8h_afbdd153b05928d7ab85ff3ed3d0d8629}} 
+\#define {\bfseries HZ\+\_\+329}~95
+\item 
+\mbox{\Hypertarget{rt2_8h_aa8f8fb1000853709c56917273b1f7fae}\label{rt2_8h_aa8f8fb1000853709c56917273b1f7fae}} 
+\#define {\bfseries HZ\+\_\+261}~119
+\item 
+\mbox{\Hypertarget{rt2_8h_a80e68e55961793b59383d77dbb66f1f4}\label{rt2_8h_a80e68e55961793b59383d77dbb66f1f4}} 
+\#define {\bfseries HZ\+\_\+130}~481
+\item 
+\mbox{\Hypertarget{rt2_8h_aa9ca9ef8f4829d4045ba6862284d60b9}\label{rt2_8h_aa9ca9ef8f4829d4045ba6862284d60b9}} 
+\#define {\bfseries HZ\+\_\+196}~319
+\item 
+\mbox{\Hypertarget{rt2_8h_a9e794239f813a151405a1600d5c0e1e1}\label{rt2_8h_a9e794239f813a151405a1600d5c0e1e1}} 
+\#define {\bfseries HZ\+\_\+400}~78
+\item 
+\mbox{\Hypertarget{rt2_8h_a95be9ae4620cffcf1ad34fb27bb72ce8}\label{rt2_8h_a95be9ae4620cffcf1ad34fb27bb72ce8}} 
+\#define {\bfseries HZ\+\_\+250}~125
+\item 
+\mbox{\Hypertarget{rt2_8h_af0d5c94dabd3041acee5073cdf8a5165}\label{rt2_8h_af0d5c94dabd3041acee5073cdf8a5165}} 
+\#define {\bfseries HZ\+\_\+800}~39
+\item 
+\mbox{\Hypertarget{rt2_8h_a999b6520220deca0062058f7c40911dd}\label{rt2_8h_a999b6520220deca0062058f7c40911dd}} 
+\#define {\bfseries SILENCE\+\_\+1S}~62500
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{rt2_8h_aba84c94d3a01d6ed9f722773c0c102a5}\label{rt2_8h_aba84c94d3a01d6ed9f722773c0c102a5}} 
+void {\bfseries speaker\+\_\+init} (void)
+\begin{DoxyCompactList}\small\item\em Initialized the speaker. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{rt2_8h_a08f8b255f311483fd226ddfb6a44d38c}\label{rt2_8h_a08f8b255f311483fd226ddfb6a44d38c}} 
+void {\bfseries speaker\+\_\+turn\+\_\+off} (void)
+\begin{DoxyCompactList}\small\item\em Turns the speaker off. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{rt2_8h_ad05b2a898161dc24d3833f33da9786cb}{task\+\_\+rt2}} (void $\ast$pv\+Parameters)
+\begin{DoxyCompactList}\small\item\em Free\+RTOS task to peform RT2 which is to play the close encounter theme, three times. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{rt2_8h_a95dea44d6be424cdf0deb70ee1814c6f}\label{rt2_8h_a95dea44d6be424cdf0deb70ee1814c6f}} 
+uint32\+\_\+t {\bfseries arr\+\_\+notes} \mbox{[}$\,$\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+headerfile for RT2. 
+
+\begin{DoxyAuthor}{Author}
+Sourav Jena, Yi Chen 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2022-\/05-\/28 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{rt2_8h_ad05b2a898161dc24d3833f33da9786cb}\label{rt2_8h_ad05b2a898161dc24d3833f33da9786cb}} 
+\index{rt2.h@{rt2.h}!task\_rt2@{task\_rt2}}
+\index{task\_rt2@{task\_rt2}!rt2.h@{rt2.h}}
+\doxysubsubsection{\texorpdfstring{task\_rt2()}{task\_rt2()}}
+{\footnotesize\ttfamily void task\+\_\+rt2 (\begin{DoxyParamCaption}\item[{void $\ast$}]{pv\+Parameters }\end{DoxyParamCaption})}
+
+
+
+Free\+RTOS task to peform RT2 which is to play the close encounter theme, three times. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pv\+Parameters} & Pointer to the parameters to be passed to the Free\+RTOS task if any. \\
+\hline
+\end{DoxyParams}

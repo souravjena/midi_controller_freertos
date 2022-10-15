@@ -1,0 +1,89 @@
+\hypertarget{midi_8cpp}{}\doxysection{midi.\+cpp File Reference}
+\label{midi_8cpp}\index{midi.cpp@{midi.cpp}}
+
+
+Source code for general MIDI functions.  
+
+
+{\ttfamily \#include \char`\"{}midi.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{midi_8cpp_a43ccf278f0743f50e5ead3692e925eb2}{midi\+\_\+send\+\_\+msg}} (\mbox{\hyperlink{structmidi__message}{midi\+\_\+message\+\_\+t}} transmit)
+\begin{DoxyCompactList}\small\item\em Sends midi messsages over UART. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{midi_8cpp_ad682b3321756755baf0c08bf7a428924}{task\+\_\+midi\+\_\+transmitter}} (void $\ast$p)
+\begin{DoxyCompactList}\small\item\em Free\+RTOS task to read queue for midi messages and then send them over UART. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{midi_8cpp_a1c9b075a0c8ddf2fa249776f76a23065}\label{midi_8cpp_a1c9b075a0c8ddf2fa249776f76a23065}} 
+void {\bfseries midi\+\_\+init} (void)
+\begin{DoxyCompactList}\small\item\em Runs all the MIDI tasks. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{midi_8cpp_a4ed3bb1a93d95d465a817ea774901dfe}\label{midi_8cpp_a4ed3bb1a93d95d465a817ea774901dfe}} 
+Task\+Handle\+\_\+t {\bfseries task\+\_\+midi\+\_\+keypad\+\_\+handle} = NULL
+\item 
+\mbox{\Hypertarget{midi_8cpp_a8539d0b833b96f7b80a93e04a4862b72}\label{midi_8cpp_a8539d0b833b96f7b80a93e04a4862b72}} 
+Task\+Handle\+\_\+t {\bfseries task\+\_\+midi\+\_\+ultrasonic\+\_\+handle} = NULL
+\item 
+\mbox{\Hypertarget{midi_8cpp_a45b53dd5cd703023bf80b3874f006c51}\label{midi_8cpp_a45b53dd5cd703023bf80b3874f006c51}} 
+Task\+Handle\+\_\+t {\bfseries task\+\_\+midi\+\_\+pot\+\_\+handle} = NULL
+\item 
+\mbox{\Hypertarget{midi_8cpp_a93f488fee1df1d4c3be1d81c4ec1e334}\label{midi_8cpp_a93f488fee1df1d4c3be1d81c4ec1e334}} 
+Task\+Handle\+\_\+t {\bfseries task\+\_\+midi\+\_\+lcd\+\_\+handle} = NULL
+\item 
+\mbox{\Hypertarget{midi_8cpp_af51286e1024e30c76a23c89b5d591d07}\label{midi_8cpp_af51286e1024e30c76a23c89b5d591d07}} 
+Task\+Handle\+\_\+t {\bfseries task\+\_\+midi\+\_\+transmitter\+\_\+handle} = NULL
+\item 
+\mbox{\Hypertarget{midi_8cpp_a92e313d53c0e073480ccaeeaebb09f8b}\label{midi_8cpp_a92e313d53c0e073480ccaeeaebb09f8b}} 
+Task\+Handle\+\_\+t {\bfseries task\+\_\+midi\+\_\+start\+\_\+handle} = NULL
+\item 
+\mbox{\Hypertarget{midi_8cpp_a56ad2cdbc8eb0ea76e56b88b5f22fde5}\label{midi_8cpp_a56ad2cdbc8eb0ea76e56b88b5f22fde5}} 
+Queue\+Handle\+\_\+t {\bfseries q\+\_\+midi\+\_\+cmd\+\_\+handle} = NULL
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Source code for general MIDI functions. 
+
+\begin{DoxyAuthor}{Author}
+Sourav Jena, Yi Chen 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2022-\/05-\/28 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{midi_8cpp_a43ccf278f0743f50e5ead3692e925eb2}\label{midi_8cpp_a43ccf278f0743f50e5ead3692e925eb2}} 
+\index{midi.cpp@{midi.cpp}!midi\_send\_msg@{midi\_send\_msg}}
+\index{midi\_send\_msg@{midi\_send\_msg}!midi.cpp@{midi.cpp}}
+\doxysubsubsection{\texorpdfstring{midi\_send\_msg()}{midi\_send\_msg()}}
+{\footnotesize\ttfamily void midi\+\_\+send\+\_\+msg (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmidi__message}{midi\+\_\+message\+\_\+t}}}]{transmit }\end{DoxyParamCaption})}
+
+
+
+Sends midi messsages over UART. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em transmit} & MIDI message data to be transmitted. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{midi_8cpp_ad682b3321756755baf0c08bf7a428924}\label{midi_8cpp_ad682b3321756755baf0c08bf7a428924}} 
+\index{midi.cpp@{midi.cpp}!task\_midi\_transmitter@{task\_midi\_transmitter}}
+\index{task\_midi\_transmitter@{task\_midi\_transmitter}!midi.cpp@{midi.cpp}}
+\doxysubsubsection{\texorpdfstring{task\_midi\_transmitter()}{task\_midi\_transmitter()}}
+{\footnotesize\ttfamily void task\+\_\+midi\+\_\+transmitter (\begin{DoxyParamCaption}\item[{void $\ast$}]{p }\end{DoxyParamCaption})}
+
+
+
+Free\+RTOS task to read queue for midi messages and then send them over UART. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & Pointer to parameters to be passed to the Free\+RTOS task if any. \\
+\hline
+\end{DoxyParams}
